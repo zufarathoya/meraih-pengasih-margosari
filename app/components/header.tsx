@@ -24,8 +24,6 @@ const Header = () => {
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-          aria-expanded={open.toString()}
-          aria-label="Toggle navigation"
         >
           {!open ? (
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
