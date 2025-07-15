@@ -47,7 +47,7 @@ const HomePage = () => {
           {/* Gambar Utama */}
           <div className="w-full h-80 relative rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/kalipetir-landscape.jpg" // Ganti dengan path gambar Anda
+              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir-landscape.jpg`} // Ganti dengan path gambar Anda
               alt="Pemandangan Kalipetir"
               layout="fill"
               objectFit="cover"

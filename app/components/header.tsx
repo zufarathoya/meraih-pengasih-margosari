@@ -11,11 +11,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo + Judul */}
         <div className="flex items-center space-x-3">
-          <Image src="/images/logo-ugm.png" alt="University Logo" className="h-12 w-12 object-contain" width={500}
+          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/logo-ugm.png`} alt="University Logo" className="h-12 w-12 object-contain" width={500}
             height={500} />
-          <Image src="/images/kkn-ppm-logo.png" alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500}
+          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kkn-ppm-logo.png`} alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500}
             height={500} />
-          <Image src="/images/PNG_LOGO_PENGASIH.png" alt=" Logo" className="h-12 w-12 object-contain" width={500}
+          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/PNG_LOGO_PENGASIH.png`} alt=" Logo" className="h-12 w-12 object-contain" width={500}
             height={500} />
           <h1 className="text-xl lg:text-2xl font-bold text-foreground">Meraih Pengasih</h1>
         </div>
