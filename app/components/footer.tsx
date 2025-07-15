@@ -2,9 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import { useState } from 'react';
 
-const Footer = (props: {}) => {
+const Footer = () => {
 
-  const [open, setOpen] = useState(false);
   return (
     <div>
       <footer className="bg-stone-800 text-stone-300 mt-20">

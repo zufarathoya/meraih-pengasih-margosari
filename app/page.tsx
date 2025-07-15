@@ -7,7 +7,7 @@ import Footer from './components/footer';
 import { LoremIpsum } from "lorem-ipsum";
 
 const HomePage = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
   const [active, setActive] = useState('index.html');
 
   useEffect(() => {

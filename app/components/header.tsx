@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import { useState } from 'react';
 
-const Header = (props: {}) => {
+const Header = () => {
   const [active, setActive] = useState('index.html');
   const [open, setOpen] = useState(false);
   
