@@ -15,7 +15,7 @@ const Header = () => {
             height={500} />
           <Image src="/images/kkn-ppm-logo.png" alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500}
             height={500} />
-          <Image src="/images/PNG_LOGO_PENGASIH.png" alt="Umbulharjo Logo" className="h-12 w-12 object-contain" width={500}
+          <Image src="/images/PNG_LOGO_PENGASIH.png" alt=" Logo" className="h-12 w-12 object-contain" width={500}
             height={500} />
           <h1 className="text-xl lg:text-2xl font-bold text-foreground">Meraih Pengasih</h1>
         </div>

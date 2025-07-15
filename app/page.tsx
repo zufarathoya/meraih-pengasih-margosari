@@ -48,7 +48,7 @@ const HomePage = () => {
           <div className="w-full h-80 relative rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/images/kalipetir-landscape.jpg" // Ganti dengan path gambar Anda
-              alt="Pemandangan Bendungan Kalipetir"
+              alt="Pemandangan Kalipetir"
               layout="fill"
               objectFit="cover"
             />
