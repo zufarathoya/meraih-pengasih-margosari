@@ -41,7 +41,7 @@ const Header = () => {
           <ul className="flex space-x-4 xl:space-x-6">
             <li>
               <a
-                href="index.html"
+                href="/"
                 onClick={() => setOpen(false)}
                 className={active === 'index.html'
                   ? ' font-semibold'
@@ -104,7 +104,7 @@ const Header = () => {
           <ul className="flex flex-col p-4 space-y-2">
             <li>
               <a
-                href="index.html"
+                href="/"
                 onClick={() => setOpen(false)}
                 className={active === 'index.html'
                   ? 'block  font-semibold'
