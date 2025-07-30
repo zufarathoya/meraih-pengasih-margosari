@@ -1,10 +1,8 @@
-'use client'
 import React from 'react';
 import Header from '@/app/components/header';
 import Footer from '@/app/components/footer';
 import Image from 'next/image';
 import { FaLeaf, FaRecycle, FaHandsHelping, FaTree, FaTrash, FaWineBottle, FaHammer } from 'react-icons/fa';
-import { useState } from 'react';
 
 const EcobrickProcess = () => {
   const steps = [
@@ -26,7 +24,7 @@ const EcobrickProcess = () => {
     {
       icon: <FaHammer className="text-green-600" size={40} />,
       title: "Bentuk Furnitur",
-      description: "Susun ecobrick yang sudah jadi kemudian di lem untuk membentuk furnitur"
+      description: "Susun ecobrick yang sudah jadi  untuk membentuk furnitur"
     }
   ];
 
@@ -44,36 +42,18 @@ const EcobrickProcess = () => {
 };
 
 const GalleryPreview = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   const images = [
     { src: "/images/ecobrick/botol.jpeg", alt: "Pemadatan Ecobrick" },
     { src: "/images/ecobrick/susunan.png", alt: "Pengumpulan Plastik" },
     { src: "/images/ecobrick/sofa.png", alt: "Pengisian Botol" },
   ];
 
-  const openModal = (image: string) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden'; // Mencegah scroll saat modal terbuka
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = 'auto'; // Mengembalikan scroll
-  };
-
   return (
     <div className="my-12">
       <h2 className="text-3xl font-bold text-center text-green-700 mb-8">Model Furnitur Ecobrick</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {images.map((image, index) => (
-          <div
-            key={index}
-            className="relative h-70 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-            onClick={() => openModal(image)}
-          >
+          <div key={index} className="relative h-70 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <Image
               src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}${image.src}`}
               alt={image.alt}
@@ -83,36 +63,10 @@ const GalleryPreview = () => {
           </div>
         ))}
       </div>
-
-      {/* Modal/Popup */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-55 p-4">
-          <div className="relative max-w-4xl w-full">
-            <button
-              onClick={closeModal}
-              className="absolute -top-10 right-0 text-white hover:text-green-300 transition-colors duration-200"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <div className="relative h-[70vh] w-full">
-              <Image
-                src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}${selectedImage.src}`}
-                alt={selectedImage.alt}
-                fill
-                className="object-contain rounded-lg"
-              />
-            </div>
-
-            <p className="text-white text-center mt-2 text-lg">{selectedImage.alt}</p>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
+
 const page = () => {
   return (
     <div className="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen flex flex-col">
