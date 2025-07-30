@@ -6,14 +6,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 // Definisikan komponen FeatureCard di sini atau impor dari file lain
-interface FeatureCardProps {
-  title: string;
-  textColor: string;
-  description: string;
-  image?: string; // optional jika tidak selalu ada
-}
-
-const FeatureCard: React.FC<FeatureCardProps> = ({ title, textColor, description, image }) => (
+const FeatureCard = ({ title, textColor, description, image }) => (
   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
     <h3 className={`text-xl font-semibold ${textColor} mb-2`}>{title}</h3>
     <p className="text-gray-600">{description}</p>
