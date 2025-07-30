@@ -5,21 +5,21 @@ export const programs = [
     date: "12 Juli 2025",
     description:
       "Pelatihan untuk anak-anak dalam mendeskripsikan pariwisata lokal berbasis digital.",
-    image: "/images/pelatihan.jpg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/pelatihan.jpg`,
   },
   {
     title: "Edukasi Praktik Ecobrick untuk Generasi Peduli Lingkungan",
     date: "18 Juli 2025",
     description:
       "Pemanfaatan ecobrick untuk menghasilkan furnitur ramah lingkungan.",
-    image: "/images/ecobrick/ecobrick-hasil.jpeg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/ecobrick/ecobrick-hasil.jpeg`,
   },
   {
     title:
       "Penguatan Literasi dan Karakter untuk Generasi Aman dan Bijak Digital",
     date: "24 Juli 2025",
     description: "Pengenalan keamanan siber dan literasi digital untuk remaja.",
-    image: "/images/cybersecurity.jpg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/cybersecurity.jpg`,
   },
   {
     title:
@@ -27,7 +27,7 @@ export const programs = [
     date: "30 Juli 2025",
     description:
       "Kesadaran lingkungan dengan memanfaatkan limbah.",
-    image: "/images/kolase/kolase-hasil.JPG",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kolase/kolase-hasil.JPG`,
   },
   {
     title:
@@ -35,7 +35,7 @@ export const programs = [
     date: "5 Agustus 2025",
     description:
       "Pelatihan digitalisasi program kerja untuk organisasi dan komunitas.",
-    image: "/images/digitalization.jpg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/digitalization.jpg`,
   },
   {
     title:
@@ -43,20 +43,21 @@ export const programs = [
     date: "10 Agustus 2025",
     description:
       "Edukasi keuangan dasar untuk anak-anak.",
-    image: "/images/menabung/menabung-hasil.jpeg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/menabung/menabung-hasil.jpeg`,
   },
   {
     title: "Memasak Kimbab & Pembinaan Usaha Bersama UMKM",
     date: "15 Agustus 2025",
     description:
       "Memasak Kimbab dan pembinaan UMKM.",
-    image: "/images/kimbab-umkm/umkm-pkk.jpeg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kimbab-umkm/umkm-pkk.jpeg`,
   },
   {
     title: "Pengelolaan Bank Sampah",
     date: "20 Agustus 2025",
     description:
       "Edukasi tentang pengelolaan sampah dan keberlanjutan lingkungan.",
-    image: "/images/waste-management.jpg",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/waste-management.jpg`,
   },
 ];
+
