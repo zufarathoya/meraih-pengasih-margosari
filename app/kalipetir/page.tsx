@@ -6,7 +6,14 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 
 // Definisikan komponen FeatureCard di sini atau impor dari file lain
-const FeatureCard = ({ title, textColor, description, image }) => (
+interface FeatureCardProps {
+  title: string;
+  textColor: string;
+  description: string;
+  image?: string; // optional jika tidak selalu ada
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ title, textColor, description, image }) => (
   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
     <h3 className={`text-xl font-semibold ${textColor} mb-2`}>{title}</h3>
     <p className="text-gray-600">{description}</p>
@@ -41,13 +48,13 @@ const Kalipetir = () => {
       title: "Spot Fotografi",
       textColor: "text-blue-700",
       description: "Spot fotografi dengan latar belakang alam yang indah di Pesona Kalipetir. Tempat ini terletak di bagian barat dari lokasi Pesona Kalipetir Mah Abang, pada lokasi ini kita dapat melihat sunset yang indah. Berikut adalah foto yang diambil pada sore hari di lokasi tersebut.",
-      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/Kalipetir/sunset.png`
+      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir/sunset.png`
     },
     {
       title: "Aktivitas Rekreasi & Lokal",
       textColor: "text-orange-700",
       description: "Pesona Kalipetir Mah Abang juga menawarkan berbagai aktivitas rekreasi yang dapat dinikmati, salah satunya digunakan untuk menonton Tim Nasional Sepak Bola Indonesia. Selain itu terdapat berbagai kegiatan yang juga dilakukan seperti jathilan dan beberapa kegiatan dari padukuhan Kalipetir Kidul. Berikut adalah contoh kegiatan yang ada di lokasi tersebut.",
-      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/Kalipetir/kegiatan-kalipetir.png`
+      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir/kegiatan-kalipetir.png`
     }
   ];
 
