@@ -1,14 +1,18 @@
 import React from 'react'
 import Image from 'next/image';
 
-interface program {
+interface Program {
   title: string;
   image: string;
   description: string;
   date: string;
 }
 
-const Chart = ({ programs }: program[]) => {
+interface ChartProps {
+  programs: Program[];
+}
+
+const Chart: React.FC<ChartProps> = ({ programs }) => {
   return (
     <div>
       {/* ✅ Mobile: Horizontal Scroll */}
