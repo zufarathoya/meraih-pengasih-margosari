@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/header';
 import Footer from './components/footer';
 import Image from 'next/image';
-import Chart from './components/chart';
+import Chart from './components/card';
+import {programs} from './data/prokerData';
 
 const HomePage = () => {
   const [active, setActive] = useState('index.html');
@@ -12,57 +13,6 @@ const HomePage = () => {
     const path = window.location.pathname.split('/').pop() || 'index.html';
     setActive(path);
   }, []);
-
-  const programs = [
-    {
-      title: 'Pelatihan pada Anak Mendeskripsikan Pariwisata Indonesia untuk Meningkatkan Kebanggaan Lokal',
-      date: '12 Juli 2025',
-      description: 'Pelatihan untuk anak-anak dalam mendeskripsikan pariwisata lokal berbasis digital.',
-      image: '/images/pelatihan.jpg'
-    },
-    {
-      title: 'Edukasi Praktik Ecobrick untuk Generasi Peduli Lingkungan',
-      date: '18 Juli 2025',
-      description: 'Pemanfaatan ecobrick untuk menghasilkan furnitur ramah lingkungan.',
-      image: '/images/ecobrick.jpg'
-    },
-    {
-      title: 'Penguatan Literasi dan Karakter untuk Generasi Aman dan Bijak Digital',
-      date: '24 Juli 2025',
-      description: 'Pengenalan keamanan siber dan literasi digital untuk remaja.',
-      image: '/images/cybersecurity.jpg'
-    },
-    {
-      title: 'Edukasi Pengolahan Sampah Plastik dan Kosakata Lingkungan Bahasa Korea melalui Kolase Plastik',
-      date: '30 Juli 2025',
-      description: 'Kampanye digital untuk meningkatkan kesadaran lingkungan di kalangan anak muda.',
-      image: '/images/environment.jpg'
-    },
-    {
-      title: 'Edukasi Pengenalan Ekowisata Lokal dan Praktik Pengolahan Sampah Kardus melalui Puzzle Daur Ulang',
-      date: '5 Agustus 2025',
-      description: 'Pelatihan digitalisasi program kerja untuk organisasi dan komunitas.',
-      image: '/images/digitalization.jpg'
-    },
-    {
-      title: 'Cerdas Finansial Sejak Dini melalui Edukasi Pengenalan Uang dan Menabung untuk Anak-Anak',
-      date: '10 Agustus 2025',
-      description: 'Edukasi keuangan dasar untuk anak-anak melalui platform digital.',
-      image: '/images/financial-literacy.jpg'
-    },
-    {
-      title: 'Memasak Kimbab & Pembinaan Usaha Bersama UMKM',
-      date: '15 Agustus 2025',
-      description: 'Pelatihan dasar teknologi informasi dan komunikasi untuk anak-anak.',
-      image: '/images/technology-education.jpg'
-    },
-    {
-      title: 'Pengelolaan Bank Sampah',
-      date: '20 Agustus 2025',
-      description: 'Edukasi tentang pengelolaan sampah dan keberlanjutan lingkungan.',
-      image: '/images/waste-management.jpg'
-    }
-  ];
 
   return (
     <div className="bg-gradient-to-br from-green-50 via-white to-blue-50 min-h-screen flex flex-col">
