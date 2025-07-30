@@ -46,12 +46,13 @@ const GalleryPreview = () => {
     { src: "/images/ecobrick/botol.jpeg", alt: "Pemadatan Ecobrick" },
     { src: "/images/ecobrick/susunan.png", alt: "Pengumpulan Plastik" },
     { src: "/images/ecobrick/sofa.png", alt: "Pengisian Botol" },
+    { src: "/images/ecobrick/rangka.jpeg", alt: "Rangka"}
   ];
 
   return (
     <div className="my-12">
       <h2 className="text-3xl font-bold text-center text-green-700 mb-8">Model Furnitur Ecobrick</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {images.map((image, index) => (
           <div key={index} className="relative h-70 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <Image
