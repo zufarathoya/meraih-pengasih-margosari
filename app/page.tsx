@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Header from './components/header';
 import Footer from './components/footer';
 import { LoremIpsum } from "lorem-ipsum";
+import Kalipetir from './kalipetir/page';
 
 const HomePage = () => {
   // const [open, setOpen] = useState(false);
@@ -32,68 +33,15 @@ const HomePage = () => {
       {/* Header */}
       <Header />
 
-      {/* Main Content: Pesona Kalipetir */}
+      {/* Main Content */}
       <main className="container mx-auto px-6 py-12">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-4">
-            Menjelajahi Pesona Kalipetir
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {lorem.generateWords(30)}
-          </p>
-        </div>
-
-        <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
-          {/* Gambar Utama */}
-          <div className="w-full h-80 relative rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir-landscape.jpg`} // Ganti dengan path gambar Anda
-              alt="Pemandangan Kalipetir"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-
-          {/* Deskripsi Sejarah */}
-          <div className="text-gray-700">
-            <h2 className="text-3xl font-bold mb-3">{lorem.generateWords(4)}</h2>
-            <p className="mb-4">
-              {lorem.generateWords(50)}
-            </p>
-            <p>
-              {lorem.generateSentences(3)}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Daya Tarik Utama Kalipetir</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1: Keindahan Alam */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-semibold text-green-700 mb-2">Keindahan Alam yang Asri</h3>
-              <p className="text-gray-600">
-                {lorem.generateSentences(3)}
-              </p>
-            </div>
-
-            {/* Card 2: Spot Fotografi */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">Spot Fotografi Instagramable</h3>
-              <p className="text-gray-600">
-                {lorem.generateSentences(3)}
-              </p>
-            </div>
-
-            {/* Card 3: Aktivitas Rekreasi */}
-            <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-              <h3 className="text-xl font-semibold text-orange-700 mb-2">Aktivitas Rekreasi & Lokal</h3>
-              <p className="text-gray-600">
-                {lorem.generateSentences(3)}
-              </p>
-            </div>
-          </div>
-        </div>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          Selamat Datang di Website Proker Kami!
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mb-6">
+          Kami hadir untuk mendigitalisasi program kerja dengan lebih efisien,
+          informatif, dan mudah diakses.
+        </p>
       </main>
 
       {/* Footer */}
