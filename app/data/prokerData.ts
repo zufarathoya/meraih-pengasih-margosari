@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const programs = [
   {
     title:
@@ -6,20 +8,32 @@ export const programs = [
     description:
       "Pelatihan untuk anak-anak dalam mendeskripsikan pariwisata lokal.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/pariwisata/pariwisata.jpeg`,
+    link: ""
   },
   {
     title: "Edukasi Praktik Ecobrick untuk Generasi Peduli Lingkungan",
     date: "17 Juli 2025",
     description:
-      "Pemanfaatan ecobrick untuk menghasilkan furnitur ramah lingkungan.",
+      "Pemanfaatan Ecobrick untuk Menghasilkan Furnitur Ramah Lingkungan.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/ecobrick/ecobrick-hasil.jpeg`,
+    link: "/ecobrick"
+  },
+  {
+    title: "Pengenalan dan Pelatihan Teknik Ecoprint sebagai Inovasi Produk Kreatif Berbasis Lingkungan",
+    date: "19 Juli 2025",
+    description:
+      "Merupakan praktik ecopint yang ditujukan ke anak-anak untuk dapat mengembangkan rasa bangga akan produk lokal dan dapat memanfaatkan bahan yang berada di lingkungan sekitar.",
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/ecoprint/ecoprint-hasil.jpeg`,
+    link: "/ecoprint"
+
   },
   {
     title:
       "Penguatan Literasi dan Karakter untuk Generasi Aman dan Bijak Digital",
     date: "15 Juli 2025",
-    description: "Pengenalan keamanan siber dan literasi digital untuk remaja.",
+    description: "Mengedukasi generasi muda dengan kemampuan literasi digital yang kuat sekaligus membangun karakter yang tangguh dalam menghadapi tantangan era digital.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/literasi-karakter/edukasi-karakter.jpeg`,
+    link: "/literasikarakter"
   },
   {
     title:
@@ -28,6 +42,7 @@ export const programs = [
     description:
       "Kesadaran lingkungan dengan memanfaatkan limbah.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kolase/kolase-hasil.JPG`,
+    link: ""
   },
   {
     title:
@@ -36,6 +51,7 @@ export const programs = [
     description:
       "Pelatihan digitalisasi program kerja untuk organisasi dan komunitas.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/digitalization.jpg`,
+    link: ""
   },
   {
     title:
@@ -44,6 +60,7 @@ export const programs = [
     description:
       "Edukasi keuangan dasar untuk anak-anak.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/menabung/menabung-hasil.jpeg`,
+    link: ""
   },
   {
     title: "Memasak Kimbab & Pembinaan Usaha Bersama UMKM",
@@ -51,6 +68,7 @@ export const programs = [
     description:
       "Memasak Kimbab dan pembinaan UMKM.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kimbab-umkm/umkm-pkk.jpeg`,
+    link: ""
   },
   {
     title: "Pengelolaan Bank Sampah",
@@ -58,6 +76,7 @@ export const programs = [
     description:
       "Edukasi tentang pengelolaan sampah dan keberlanjutan lingkungan.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/waste-management.jpg`,
+    link: ""
   },
 ];
 

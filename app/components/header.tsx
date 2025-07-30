@@ -39,7 +39,7 @@ const Header = () => {
           <ul className="flex space-x-4 xl:space-x-6">
             <li>
               <a
-                href="/"
+                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/`}
                 className={pathname === '/' ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Beranda
@@ -47,7 +47,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/proker"
+                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker`}
                 className={pathname.startsWith('/proker') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Proker
@@ -55,7 +55,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/kalipetir"
+                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/kalipetir`}
                 className={pathname.startsWith('/kalipetir') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Ekowisata 
@@ -71,7 +71,7 @@ const Header = () => {
           <ul className="flex flex-col p-4 space-y-2">
             <li>
               <a
-                href="/"
+                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/`}
                 onClick={() => setOpen(false)}
                 className={pathname === '/' ? 'block font-semibold underline' : 'block text-secondary-foreground hover:transition-colors'}
               >
@@ -80,7 +80,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/proker"
+                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker`}
                 onClick={() => setOpen(false)}
                 className={pathname.startsWith('/proker') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
@@ -89,7 +89,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href="/kalipetir"
+                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/kalipetir`}
                 onClick={() => setOpen(false)}
                 className={pathname.startsWith('/kalipetir') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >

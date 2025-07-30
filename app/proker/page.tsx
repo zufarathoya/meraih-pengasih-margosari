@@ -10,31 +10,33 @@ const Page = () => {
       <Header />
       <main className="container mx-auto px-6 py-12 flex-grow">
         <div className="text-center">
-        <h1 className="text-3xl font-bold mb-3 ">
-          Program Kerja Kami 
-        </h1>
+          <h1 className="text-3xl font-bold mb-3 ">
+            Program Kerja Kami
+          </h1>
         </div>
         <h1 className="text-xl mb-7 mt-7">
           Berikut ini adalah program kerja yang kami lakukan selama kegiatan KKN ini berlangsung yang bertemakan Pengembangan Ekowisata dan Ketahanan Pangan di Kalurahan Margosari
         </h1>
-        <div className="hidden md:grid grid-cols-3 gap-8">
+        <div className=" md:grid grid-cols-3 gap-8">
           {programs.map((prog, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col"
-            >
-              <div className="relative w-full h-56 mb-4">
-                <Image
-                  src={prog.image}
-                  alt={prog.title}
-                  fill
-                  className="rounded-lg object-cover"
-                />
+            <a href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker/${prog.link}`}>
+              <div
+                key={idx}
+                className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col"
+              >
+                <div className="relative w-full h-56 mb-4">
+                  <Image
+                    src={prog.image}
+                    alt={prog.title}
+                    fill
+                    className="rounded-lg object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-800">{prog.title}</h3>
+                <span className="text-sm text-gray-500">{prog.date}</span>
+                <p className="text-gray-600 mt-2 flex-grow">{prog.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-gray-800">{prog.title}</h3>
-              <span className="text-sm text-gray-500">{prog.date}</span>
-              <p className="text-gray-600 mt-2 flex-grow">{prog.description}</p>
-            </div>
+            </a>
           ))}
         </div>
       </main>
