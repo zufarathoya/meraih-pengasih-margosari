@@ -1,26 +1,24 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
-  const [active, setActive] = useState('index.html');
+  const pathname = usePathname(); // ✅ Mendapatkan path URL
   const [open, setOpen] = useState(false);
-  
+
   return (
     <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo + Judul */}
         <div className="flex items-center space-x-3">
-          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/logo-ugm.png`} alt="University Logo" className="h-12 w-12 object-contain" width={500}
-            height={500} />
-          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kkn-ppm-logo.png`} alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500}
-            height={500} />
-          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/PNG_LOGO_PENGASIH.png`} alt=" Logo" className="h-12 w-12 object-contain" width={500}
-            height={500} />
+          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/logo-ugm.png`} alt="University Logo" className="h-12 w-12 object-contain" width={500} height={500} />
+          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kkn-ppm-logo.png`} alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500} height={500} />
+          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/PNG_LOGO_PENGASIH.png`} alt="Logo" className="h-12 w-12 object-contain" width={500} height={500} />
           <h1 className="text-xl lg:text-2xl font-bold text-foreground">Meraih Pengasih</h1>
         </div>
 
-        {/* Tombol Mobile Menu (LG ke bawah) */}
+        {/* Tombol Mobile Menu */}
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
@@ -36,69 +34,38 @@ const Header = () => {
           )}
         </button>
 
-        {/* Desktop navigation (LG ke atas) */}
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex" aria-label="Main navigation">
           <ul className="flex space-x-4 xl:space-x-6">
             <li>
               <a
                 href="/"
-                onClick={() => setOpen(false)}
-                className={active === 'index.html'
-                  ? ' font-semibold'
-                  : 'text-muted-foreground hover: transition-colors'}
+                className={pathname === '/' ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Beranda
               </a>
             </li>
-            {/*<li>
+            <li>
               <a
-                href="waste-types.html"
-                onClick={() => setOpen(false)}
-                className={active === 'waste-types.html'
-                  ? ' font-semibold'
-                  : 'text-muted-foreground hover: transition-colors'}
+                href="/proker"
+                className={pathname.startsWith('/proker') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
-                Jenis Sampah
+                Proker
               </a>
             </li>
             <li>
               <a
-                href="waste-management.html"
-                onClick={() => setOpen(false)}
-                className={active === 'waste-management.html'
-                  ? ' font-semibold'
-                  : 'text-muted-foreground hover: transition-colors'}
+                href="/kalipetir"
+                className={pathname.startsWith('/kalipetir') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
-                Pengelolaan
+                Ekowisata 
               </a>
             </li>
-            <li>
-              <a
-                href="waste-impacts.html"
-                onClick={() => setOpen(false)}
-                className={active === 'waste-impacts.html'
-                  ? ' font-semibold'
-                  : 'text-muted-foreground hover: transition-colors'}
-              >
-                Dampak
-              </a>
-            </li>
-            <li>
-              <a
-                href="waste-banks.html"
-                onClick={() => setOpen(false)}
-                className={active === 'waste-banks.html'
-                  ? ' font-semibold'
-                  : 'text-muted-foreground hover: transition-colors'}
-              >
-                Bank Sampah
-              </a>
-            </li>*/}
           </ul>
         </nav>
       </div>
 
-      {/* Mobile navigation (LG ke bawah) */}
+      {/* Mobile Navigation */}
       {open && (
         <nav className="lg:hidden bg-secondary border-t border-border" aria-label="Mobile navigation">
           <ul className="flex flex-col p-4 space-y-2">
@@ -106,62 +73,35 @@ const Header = () => {
               <a
                 href="/"
                 onClick={() => setOpen(false)}
-                className={active === 'index.html'
-                  ? 'block  font-semibold'
-                  : 'block text-secondary-foreground hover: transition-colors'}
+                className={pathname === '/' ? 'block font-semibold underline' : 'block text-secondary-foreground hover:transition-colors'}
               >
                 Beranda
               </a>
             </li>
-            {/*<li>
+            <li>
               <a
-                href="waste-types.html"
+                href="/proker"
                 onClick={() => setOpen(false)}
-                className={active === 'waste-types.html'
-                  ? 'block  font-semibold'
-                  : 'block text-secondary-foreground hover: transition-colors'}
+                className={pathname.startsWith('/proker') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
-                Jenis Sampah
+                Proker
               </a>
             </li>
             <li>
               <a
-                href="waste-management.html"
+                href="/kalipetir"
                 onClick={() => setOpen(false)}
-                className={active === 'waste-management.html'
-                  ? 'block  font-semibold'
-                  : 'block text-secondary-foreground hover: transition-colors'}
+                className={pathname.startsWith('/kalipetir') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
-                Pengelolaan
+                Ekowisata 
               </a>
             </li>
-            <li>
-              <a
-                href="waste-impacts.html"
-                onClick={() => setOpen(false)}
-                className={active === 'waste-impacts.html'
-                  ? 'block  font-semibold'
-                  : 'block text-secondary-foreground hover: transition-colors'}
-              >
-                Dampak
-              </a>
-            </li>
-            <li>
-              <a
-                href="waste-banks.html"
-                onClick={() => setOpen(false)}
-                className={active === 'waste-banks.html'
-                  ? 'block  font-semibold'
-                  : 'block text-secondary-foreground hover: transition-colors'}
-              >
-                Bank Sampah
-              </a>
-            </li>*/}
           </ul>
         </nav>
       )}
     </header>
+  );
+};
 
-  )
-}
 export default Header;
+
