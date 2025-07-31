@@ -8,7 +8,7 @@ export const programs = [
     description:
       "Pelatihan untuk anak-anak dalam mendeskripsikan pariwisata lokal.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/pariwisata/pariwisata.jpeg`,
-    link: ""
+    link: "/pariwisata"
   },
   {
     title: "Edukasi Praktik Ecobrick untuk Generasi Peduli Lingkungan",
@@ -42,7 +42,7 @@ export const programs = [
     description:
       "Kesadaran lingkungan dengan memanfaatkan limbah.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kolase/kolase-hasil.JPG`,
-    link: ""
+    link: "/kolase"
   },
   {
     title:
@@ -58,9 +58,9 @@ export const programs = [
       "Cerdas Finansial Sejak Dini melalui Edukasi Pengenalan Uang dan Menabung untuk Anak-Anak",
     date: "24 Juli 2025",
     description:
-      "Edukasi keuangan dasar untuk anak-anak.",
+      "Edukasi menabung untuk anak-anak dengan membuat tabungan kertas yang mudah untuk dibuat.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/menabung/menabung-hasil.jpeg`,
-    link: ""
+    link: "/menabung"
   },
   {
     title: "Memasak Kimbab & Pembinaan Usaha Bersama UMKM",
@@ -68,7 +68,7 @@ export const programs = [
     description:
       "Memasak Kimbab dan pembinaan UMKM.",
     image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kimbab-umkm/umkm-pkk.jpeg`,
-    link: ""
+    link: "/kimbab-umkm"
   },
   {
     title: "Pengelolaan Bank Sampah",
