@@ -50,8 +50,8 @@ export const programs = [
     date: "26 Juli 2025",
     description:
       "Pelatihan digitalisasi program kerja untuk organisasi dan komunitas.",
-    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/digitalization.jpg`,
-    link: ""
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/puzzle/puzzle.jpeg`,
+    link: "/puzzle"
   },
   {
     title:
@@ -75,8 +75,8 @@ export const programs = [
     date: "13 Juli 2025",
     description:
       "Edukasi tentang pengelolaan sampah dan keberlanjutan lingkungan.",
-    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/waste-management.jpg`,
-    link: ""
+    image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/bank-sampah/bank-sampah.jpeg`,
+    link: "/bank-sampah"
   },
 ];
 
