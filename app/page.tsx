@@ -38,7 +38,7 @@ const HomePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/proker`}
                 className="px-6 py-3 bg-yellow-600 text-white rounded-lg shadow hover:bg-yellow-700 transition text-center"
               >
                 Lihat Program Kerja
@@ -63,7 +63,7 @@ const HomePage = () => {
       {/* Link to Kalipetir */}
       <section className="container mx-auto px-4 sm:px-6 py-12">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">
-          <a href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/kalipetir`} className="hover:underline">
+          <a href={`${process.env.NODE_ENV === "production" ? "" : ""}/kalipetir`} className="hover:underline">
             Potensi Ekowisata di Kalurahan Margosari
           </a>
         </h2>
@@ -71,7 +71,7 @@ const HomePage = () => {
           Kalurahan Margosari memiliki potensi ekowisata yang kaya, termasuk wisata alam, budaya, dan edukasi lingkungan.<br />
           Salah satu dari lokasi yang berpotensi menjadi destinasi wisata adalah Kalipetir tepatnya di <span className="text-yellow-600">Pesona Kalipetir Mah Abang, Kalipetir Kidul, Margosari</span> yang menawarkan keindahan alam dan kesempatan untuk belajar tentang keberlanjutan lingkungan. Berikut kami tampilkan mengenai lokasi tersebut.
         </p>
-        <a href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/kalipetir`} target="_blank" rel="noopener noreferrer"
+        <a href={`${process.env.NODE_ENV === "production" ? "" : ""}/kalipetir`} target="_blank" rel="noopener noreferrer"
           className="px-6 py-3 bg-yellow-600 text-white rounded-lg shadow hover:bg-yellow-700 transition">
           Menjelajahi Pesona Kalipetir
         </a>
