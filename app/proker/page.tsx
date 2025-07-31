@@ -19,7 +19,7 @@ const Page = () => {
         </h1>
         <div className=" md:grid grid-cols-3 gap-8">
           {programs.map((prog, idx) => (
-            <a href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker/${prog.link}`}>
+            <a href={`${process.env.NODE_ENV === "production" ? "" : ""}/proker/${prog.link}`}>
               <div
                 key={idx}
                 className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col"

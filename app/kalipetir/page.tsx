@@ -42,19 +42,19 @@ const Kalipetir = () => {
       title: "Kedai MahAbang",
       textColor: "text-green-700",
       description: "Ini merupakan kedai yang menyediakan berbagai makanan dan minuman. Kedai ini terletak di bagian timur dari lokasi Pesona Kalipetir Mah Abang, dekat dengan area parkir. Lokasi ini kerap menjadi tempat berkumpul bagi warga lokal untuk menikmati makanan sekaligus pemandangan di daerah tersebut.",
-      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir/kedai-mahabang.png`
+      image: `${process.env.NODE_ENV === "production" ? "" : ""}/images/kalipetir/kedai-mahabang.png`
     },
     {
       title: "Spot Fotografi",
       textColor: "text-blue-700",
       description: "Spot fotografi dengan latar belakang alam yang indah di Pesona Kalipetir. Tempat ini terletak di bagian barat dari lokasi Pesona Kalipetir Mah Abang, pada lokasi ini kita dapat melihat sunset yang indah. Berikut adalah foto yang diambil pada sore hari di lokasi tersebut.",
-      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir/sunset.png`
+      image: `${process.env.NODE_ENV === "production" ? "" : ""}/images/kalipetir/sunset.png`
     },
     {
       title: "Aktivitas Rekreasi & Lokal",
       textColor: "text-orange-700",
       description: "Pesona Kalipetir Mah Abang juga menawarkan berbagai aktivitas rekreasi yang dapat dinikmati, salah satunya digunakan untuk menonton Tim Nasional Sepak Bola Indonesia. Selain itu terdapat berbagai kegiatan yang juga dilakukan seperti jathilan dan beberapa kegiatan dari padukuhan Kalipetir Kidul. Berikut adalah contoh kegiatan yang ada di lokasi tersebut.",
-      image: `${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir/kegiatan-kalipetir.png`
+      image: `${process.env.NODE_ENV === "production" ? "" : ""}/images/kalipetir/kegiatan-kalipetir.png`
     }
   ];
 
@@ -82,7 +82,7 @@ const Kalipetir = () => {
         <div className="mt-16 grid md:grid-cols-2 gap-12 items-center">
           <div className="w-full h-80 relative rounded-lg overflow-hidden shadow-lg">
             <Image
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kalipetir/kalipetir-landscape.jpg`}
+              src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/kalipetir/kalipetir-landscape.jpg`}
               alt="Pemandangan Kalipetir"
               layout="fill"
               objectFit="cover"

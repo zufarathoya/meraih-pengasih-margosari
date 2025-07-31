@@ -33,7 +33,7 @@ const Page = () => {
           </p>
           <div className="flex justify-center mt-8">
             <Image
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/puzzle/puzzle.jpeg`}
+              src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/puzzle/puzzle.jpeg`}
               alt="Puzzle Daur Ulang Ekowisata"
               width={800}
               height={500}

@@ -12,9 +12,9 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo + Judul */}
         <div className="flex items-center space-x-3">
-          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/logo-ugm.png`} alt="University Logo" className="h-12 w-12 object-contain" width={500} height={500} />
-          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kkn-ppm-logo.png`} alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500} height={500} />
-          <Image src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/PNG_LOGO_PENGASIH.png`} alt="Logo" className="h-12 w-12 object-contain" width={500} height={500} />
+          <Image src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/logo-ugm.png`} alt="University Logo" className="h-12 w-12 object-contain" width={500} height={500} />
+          <Image src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/kkn-ppm-logo.png`} alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500} height={500} />
+          <Image src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/PNG_LOGO_PENGASIH.png`} alt="Logo" className="h-12 w-12 object-contain" width={500} height={500} />
           <h1 className="text-xl lg:text-2xl font-bold text-foreground">Meraih Pengasih</h1>
         </div>
 
@@ -39,7 +39,7 @@ const Header = () => {
           <ul className="flex space-x-4 xl:space-x-6">
             <li>
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/`}
                 className={pathname === '/' ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Beranda
@@ -47,7 +47,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/proker`}
                 className={pathname.startsWith('/proker') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Proker
@@ -55,7 +55,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/kalipetir`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/kalipetir`}
                 className={pathname.startsWith('/kalipetir') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
                 Ekowisata 
@@ -71,7 +71,7 @@ const Header = () => {
           <ul className="flex flex-col p-4 space-y-2">
             <li>
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/`}
                 onClick={() => setOpen(false)}
                 className={pathname === '/' ? 'block font-semibold underline' : 'block text-secondary-foreground hover:transition-colors'}
               >
@@ -80,7 +80,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/proker`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/proker`}
                 onClick={() => setOpen(false)}
                 className={pathname.startsWith('/proker') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >
@@ -89,7 +89,7 @@ const Header = () => {
             </li>
             <li>
               <a
-                href={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/kalipetir`}
+                href={`${process.env.NODE_ENV === "production" ? "" : ""}/kalipetir`}
                 onClick={() => setOpen(false)}
                 className={pathname.startsWith('/kalipetir') ? 'font-semibold underline' : 'text-muted-foreground hover:transition-colors'}
               >

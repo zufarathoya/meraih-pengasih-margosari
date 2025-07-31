@@ -40,7 +40,7 @@ const GalleryPreview = () => {
         {images.map((image, index) => (
           <div key={index} className="relative h-48 overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
             <Image
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}${image.src}`}
+              src={`${process.env.NODE_ENV === "production" ? "" : ""}${image.src}`}
               alt={image.alt}
               fill
               className="object-cover hover:scale-105 transition-transform duration-300"
@@ -75,7 +75,7 @@ const page = () => {
         <div className="flex justify-center mb-16">
           <div className="relative w-full max-w-4xl h-96 overflow-hidden rounded-xl shadow-2xl">
             <Image
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/ecoprint/ecoprint-hasil.jpeg`}
+              src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/ecoprint/ecoprint-hasil.jpeg`}
               alt="Ecoprint Hasil"
               fill
               className="object-cover"

@@ -43,7 +43,7 @@ const Page = () => {
             {/* Gambar */}
             <div className="md:w-1/2">
               <Image
-                src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kimbab/kimbab-workshop.jpg`}
+                src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/kimbab/kimbab-workshop.jpg`}
                 alt="Memasak Kimbab"
                 width={600}
                 height={400}
@@ -78,7 +78,7 @@ const Page = () => {
             {/* Gambar */}
             <div className="md:w-1/2">
               <Image
-                src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/umkm/umkm-pembinaan.jpg`}
+                src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/umkm/umkm-pembinaan.jpg`}
                 alt="Pembinaan UMKM"
                 width={600}
                 height={400}

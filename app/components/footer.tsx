@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
           <div className="flex justify-center content-center items-center">
             <Image 
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/PNG_LOGO_PENGASIH.png`} 
+              src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/PNG_LOGO_PENGASIH.png`} 
               alt="University Logo" 
               className="h-7 w-7 mx-3" 
               width={500} 

@@ -39,7 +39,7 @@ const Page = () => {
         <div className="flex justify-center mb-16">
           <div className="relative w-full max-w-4xl h-96 overflow-hidden rounded-xl shadow-2xl">
             <Image
-              src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/menabung/menabung-hasil.jpeg`}
+              src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/menabung/menabung-hasil.jpeg`}
               alt="Hasil Ecobrick"
               fill
               className="object-cover"

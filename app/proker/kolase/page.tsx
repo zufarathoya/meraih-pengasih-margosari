@@ -37,7 +37,7 @@ const Page = () => {
             Kesadaran lingkungan dengan memanfaatkan limbah plastik untuk menciptakan karya seni yang edukatif dan menarik.
           </p>
           <Image
-            src={`${process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : ""}/images/kolase/kolase-hasil.JPG`}
+            src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/kolase/kolase-hasil.JPG`}
             alt="Kolase Plastik"
             width={800}
             height={600}
