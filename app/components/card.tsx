@@ -23,13 +23,15 @@ const Chart: React.FC<ChartProps> = ({ programs }) => {
               key={idx}
               className="bg-white rounded-xl shadow hover:shadow-lg transition p-4 flex flex-col flex-shrink-0 w-64"
             >
-              <Image
-                src={prog.image}
-                alt={prog.title}
-                width={300}
-                height={200}
-                className="rounded-lg mb-4 object-cover"
-              />
+
+              <div className="relative w-full h-40 mb-4">
+                <Image
+                  src={prog.image}
+                  alt={prog.title}
+                  fill
+                  className="rounded-lg object-cover"
+                />
+              </div>
               <h3 className="text-lg font-bold text-gray-800">{prog.title}</h3>
               <span className="text-sm text-gray-500">{prog.date}</span>
               <p className="text-gray-600 mt-2 flex-grow text-sm">{prog.description}</p>

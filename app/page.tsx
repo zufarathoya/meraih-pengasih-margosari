@@ -15,13 +15,13 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-br from-yellow-50 via-white to-blue-50 min-h-screen flex flex-col">
+    <div className="bg-gradient-to-br from-yellow-100 via-white to-blue-50 min-h-screen flex flex-col">
       {/* Header */}
       <Header />
 
       {/* Hero Section */}
       <section className="relative ">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-24">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 py-12">
 
           {/* Left Content */}
           <div className="md:w-1/2 space-y-6 text-center md:text-left">

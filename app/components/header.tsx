@@ -8,15 +8,17 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="border-b bg-white/70 backdrop-blur-sm sticky top-0 z-50">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo + Judul */}
+        <a href='/'>
         <div className="flex items-center space-x-3">
           <Image src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/logo-ugm.png`} alt="University Logo" className="h-12 w-12 object-contain" width={500} height={500} />
           <Image src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/kkn-ppm-logo.png`} alt="KKN PPM UGM Logo" className="h-10 w-10 object-contain" width={500} height={500} />
           <Image src={`${process.env.NODE_ENV === "production" ? "" : ""}/images/PNG_LOGO_PENGASIH.png`} alt="Logo" className="h-12 w-12 object-contain" width={500} height={500} />
           <h1 className="text-xl lg:text-2xl font-bold text-foreground">Meraih Pengasih</h1>
         </div>
+        </a>
 
         {/* Tombol Mobile Menu */}
         <button
