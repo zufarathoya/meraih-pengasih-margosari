@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   basePath:
     process.env.NODE_ENV === "production" ? "/meraih-pengasih-margosari" : "",
-  // output: "export",
+  output: "export",
   images: {
     unoptimized: true, // Nonaktifkan optimisasi gambar
   },
