@@ -1,0 +1,78 @@
+---
+/** Header: ganti next/image & usePathname ke Astro */
+
+const pathname = Astro.url.pathname;
+
+type NavItem = { href: string; label: string; active?: (p: string) => boolean };
+const nav: NavItem[] = [
+  { href: "/", label: "Beranda", active: (p) => p === "/" },
+  { href: "/proker", label: "Program", active: (p) => p.startsWith("/proker") },
+  { href: "/kalipetir", label: "Ekowisata", active: (p) => p.startsWith("/kalipetir") },
+];
+---
+
+<header class="border-b bg-white/70 backdrop-blur-sm sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-2 flex items-center justify-between">
+    <!-- Logo + Judul -->
+    <a href="/" class="flex items-center space-x-3">
+      <img src="/images/logo-ugm.png" alt="UGM Logo" class="h-12 w-12 object-contain" loading="lazy" />
+      <img src="/images/kkn-ppm-logo.png" alt="KKN Logo" class="h-10 w-10 object-contain" loading="lazy" />
+      <img src="/images/PNG_LOGO_PENGASIH.png" alt="Logo" class="h-12 w-12 object-contain" loading="lazy" />
+      <div class="leading-tight">
+        <h1 class="text-xl font-bold text-gray-900">MERAIH PENGASIH</h1>
+        <p class="text-xs text-gray-600">KKN-PPM UGM YO-062</p>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-6">
+        {nav.map((n) => (
+          <li>
+            <a
+              href={n.href}
+              class={`text-sm ${
+                n.active && n.active(pathname)
+                  ? "font-semibold underline"
+                  : "text-gray-600 hover:text-gray-900"
+              }`}
+            >
+              {n.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Mobile button -->
+    <button id="menu-btn" class="md:hidden p-2 rounded-lg border border-gray-200" aria-label="Toggle menu">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav id="mobile-nav" class="md:hidden hidden border-t bg-white/90 backdrop-blur-sm">
+    <ul class="px-4 py-3 space-y-2">
+      {nav.map((n) => (
+        <li>
+          <a
+            href={n.href}
+            class={`block py-2 ${
+              n.active && n.active(pathname)
+                ? "font-semibold underline"
+                : ""
+            }`}
+          >
+            {n.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const nav = document.getElementById("mobile-nav");
+  btn?.addEventListener("click", () => nav?.classList.toggle("hidden"));
+</script>
