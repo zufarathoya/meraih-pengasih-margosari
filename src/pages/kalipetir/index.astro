@@ -1,6 +1,11 @@
 ---
 import BaseLayout from "../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
+import KalipetirLandscape from "../../content/posts/images/kalipetir/kalipetir-landscape.jpg";
+import KedaiMahabang from "../../content/posts/images/kalipetir/kedai-mahabang.png";
+import Sunset from "../../content/posts/images/kalipetir/sunset.png";
+import Kegiatan from "../../content/posts/images/kalipetir/kegiatan-kalipetir.png";
+
 
 // Data untuk kartu fitur
 const featureCardsData = [
@@ -9,21 +14,24 @@ const featureCardsData = [
     textColor: "text-green-700",
     description:
       "Ini merupakan kedai yang menyediakan berbagai makanan dan minuman. Kedai ini terletak di bagian timur dari lokasi Pesona Kalipetir Mah Abang, dekat dengan area parkir. Lokasi ini kerap menjadi tempat berkumpul bagi warga lokal untuk menikmati makanan sekaligus pemandangan di daerah tersebut.",
-    image: "../images/kalipetir/kedai-mahabang.png",
+    // image: "./images/kalipetir/kedai-mahabang.png",
+    image: KedaiMahabang,
   },
   {
     title: "Spot Fotografi",
     textColor: "text-blue-700",
     description:
       "Spot fotografi dengan latar belakang alam yang indah di Pesona Kalipetir. Tempat ini terletak di bagian barat dari lokasi Pesona Kalipetir Mah Abang, pada lokasi ini kita dapat melihat sunset yang indah. Berikut adalah foto yang diambil pada sore hari di lokasi tersebut.",
-    image: "../images/kalipetir/sunset.png",
+    // image: "./images/kalipetir/sunset.png",
+    image: Sunset,
   },
   {
     title: "Aktivitas Rekreasi & Lokal",
     textColor: "text-orange-700",
     description:
       "Pesona Kalipetir Mah Abang juga menawarkan berbagai aktivitas rekreasi yang dapat dinikmati, salah satunya digunakan untuk menonton Tim Nasional Sepak Bola Indonesia. Selain itu terdapat berbagai kegiatan yang juga dilakukan seperti jathilan dan beberapa kegiatan dari padukuhan Kalipetir Kidul. Berikut adalah contoh kegiatan yang ada di lokasi tersebut.",
-    image: "../images/kalipetir/kegiatan-kalipetir.png",
+    // image: "./images/kalipetir/kegiatan-kalipetir.png",
+    image: Kegiatan,
   },
 ];
 ---
@@ -47,9 +55,9 @@ const featureCardsData = [
     <!-- Section Deskripsi & Gambar -->
     <div class="mt-16 grid md:grid-cols-2 gap-12 items-center">
       <div class="w-full h-80 relative rounded-lg overflow-hidden shadow-lg">
-        <img
-          src="./images/kalipetir/kalipetir-landscape.jpg"
-          alt="Pemandangan Kalipetir"
+        <Image
+          src={KalipetirLandscape}
+          alt="Pesona Kalipetir Mah Abang"
           class="w-full h-full object-cover"
           loading="lazy"
         />
@@ -85,7 +93,7 @@ const featureCardsData = [
               </h3>
               <p class="text-gray-600">{card.description}</p>
               <div class="mt-4">
-                <img
+                <Image
                   src={card.image}
                   alt={card.title}
                   class="rounded-lg object-cover w-full h-60"

@@ -1,5 +1,9 @@
 ---
 /** Header: ganti next/image & usePathname ke Astro */
+import { Image } from "astro:assets";
+import LogoUGM from "../../public/images/logo-ugm.png";
+import LogoKKN from "../../public/images/kkn-ppm-logo.png";
+import LogoPengasih from "../../public/images/PNG_LOGO_PENGASIH.png";
 
 const pathname = Astro.url.pathname;
 
@@ -15,9 +19,12 @@ const nav: NavItem[] = [
   <div class="container mx-auto px-4 py-2 flex items-center justify-between">
     <!-- Logo + Judul -->
     <a href="/" class="flex items-center space-x-3">
-      <img src="/images/logo-ugm.png" alt="UGM Logo" class="h-12 w-12 object-contain" loading="lazy" />
-      <img src="/images/kkn-ppm-logo.png" alt="KKN Logo" class="h-10 w-10 object-contain" loading="lazy" />
-      <img src="/images/PNG_LOGO_PENGASIH.png" alt="Logo" class="h-12 w-12 object-contain" loading="lazy" />
+      <!-- <Image src="/images/logo-ugm.png" alt="UGM Logo" class="h-12 w-12 object-contain" loading="lazy" /> -->
+      <Image src={LogoUGM} alt="UGM Logo" class="h-12 w-12 object-contain" loading="lazy" />
+      <!-- <Image src="/images/kkn-ppm-logo.png" alt="KKN Logo" class="h-10 w-10 object-contain" loading="lazy" /> -->
+      <Image src={LogoKKN} alt="KKN Logo" class="h-10 w-10 object-contain" loading="lazy" />
+      <!-- <Image src="/images/PNG_LOGO_PENGASIH.png" alt="Logo" class="h-12 w-12 object-contain" loading="lazy" /> -->
+      <Image src={LogoPengasih} alt="Logo" class="h-12 w-12 object-contain" loading="lazy" />
       <div class="leading-tight">
         <h1 class="text-xl font-bold text-gray-900">MERAIH PENGASIH</h1>
         <p class="text-xs text-gray-600">KKN-PPM UGM YO-062</p>
